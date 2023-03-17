@@ -1,4 +1,4 @@
-package com.javarush.cryptanalyzer.tyapkin.service;
+package com.javarush.cryptanalyser.tyapkin.service;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -7,9 +7,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-import static com.javarush.cryptanalyzer.tyapkin.coding.Encode.encrypt;
-import static com.javarush.cryptanalyzer.tyapkin.constants.applicationConstants.FORMAT;
-import static com.javarush.cryptanalyzer.tyapkin.constants.inputOutputConstants.*;
+import static com.javarush.cryptanalyser.tyapkin.coding.Encode.encrypt;
+import static com.javarush.cryptanalyser.tyapkin.constants.applicationConstants.FORMAT;
+import static com.javarush.cryptanalyser.tyapkin.constants.inputOutputConstants.*;
 
 public class EnterText {
     public EnterText() {

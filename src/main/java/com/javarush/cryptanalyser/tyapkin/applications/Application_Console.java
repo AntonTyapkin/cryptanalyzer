@@ -1,11 +1,11 @@
-package com.javarush.cryptanalyzer.tyapkin.applications;
+package com.javarush.cryptanalyser.tyapkin.applications;
 
-import com.javarush.cryptanalyzer.tyapkin.service.BrutForce;
-import com.javarush.cryptanalyzer.tyapkin.service.DecodeFile;
-import com.javarush.cryptanalyzer.tyapkin.service.IncodeFile;
+import com.javarush.cryptanalyser.tyapkin.service.BrutForce;
+import com.javarush.cryptanalyser.tyapkin.service.DecodeFile;
+import com.javarush.cryptanalyser.tyapkin.service.IncodeFile;
 
 import java.util.Scanner;
-import static com.javarush.cryptanalyzer.tyapkin.constants.inputOutputConstants.*;
+import static com.javarush.cryptanalyser.tyapkin.constants.inputOutputConstants.*;
 
 public class Application_Console {
 

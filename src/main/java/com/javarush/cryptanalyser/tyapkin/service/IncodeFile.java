@@ -1,6 +1,6 @@
-package com.javarush.cryptanalyzer.tyapkin.service;
+package com.javarush.cryptanalyser.tyapkin.service;
 import java.util.Scanner;
-import static com.javarush.cryptanalyzer.tyapkin.constants.inputOutputConstants.*;
+import static com.javarush.cryptanalyser.tyapkin.constants.inputOutputConstants.*;
 
 public class IncodeFile {
     public IncodeFile() {

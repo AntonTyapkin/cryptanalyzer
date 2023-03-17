@@ -1,4 +1,4 @@
-package com.javarush.cryptanalyzer.tyapkin.service;
+package com.javarush.cryptanalyser.tyapkin.service;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,10 +8,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static com.javarush.cryptanalyzer.tyapkin.constants.applicationConstants.FORMAT;
-import static com.javarush.cryptanalyzer.tyapkin.constants.cryptoAlphabet.ALPHABET;
-import static com.javarush.cryptanalyzer.tyapkin.constants.inputOutputConstants.*;
-import static com.javarush.cryptanalyzer.tyapkin.coding.Decode.decrypt;
+import static com.javarush.cryptanalyser.tyapkin.constants.applicationConstants.FORMAT;
+import static com.javarush.cryptanalyser.tyapkin.constants.cryptoAlphabet.ALPHABET;
+import static com.javarush.cryptanalyser.tyapkin.constants.inputOutputConstants.*;
+import static com.javarush.cryptanalyser.tyapkin.coding.Decode.decrypt;
 
 public class BrutForce {
 
@@ -56,9 +56,9 @@ String userWay;
                     inputBuffer.append('\n');
 
                     System.out.println(line + " " + " key = " + i);
-                    System.out.println("Найдите читаемую строку");
                 }
             }
+            System.out.println("Осталось найти читаемую строку!");
             file.close();
 
             // Обработка исключений

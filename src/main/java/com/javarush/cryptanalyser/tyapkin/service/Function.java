@@ -1,4 +1,4 @@
-package com.javarush.cryptanalyzer.tyapkin.service;
+package com.javarush.cryptanalyser.tyapkin.service;
 
 import javax.xml.transform.Result;
 

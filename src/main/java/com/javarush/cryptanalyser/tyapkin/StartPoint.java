@@ -1,6 +1,5 @@
-package com.javarush.cryptanalyzer.tyapkin;
-import com.javarush.cryptanalyzer.tyapkin.applications.Application_Console;
-
+package com.javarush.cryptanalyser.tyapkin;
+import com.javarush.cryptanalyser.tyapkin.applications.Application_Console;
 
 
 public class StartPoint {

@@ -1,4 +1,4 @@
-package com.javarush.cryptanalyzer.tyapkin.constants;
+package com.javarush.cryptanalyser.tyapkin.constants;
 
 public class inputOutputConstants {
 

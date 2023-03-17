@@ -1,4 +1,4 @@
-package com.javarush.cryptanalyzer.tyapkin.service;
+package com.javarush.cryptanalyser.tyapkin.service;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,9 +8,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-import static com.javarush.cryptanalyzer.tyapkin.coding.Encode.encrypt;
-import static com.javarush.cryptanalyzer.tyapkin.constants.applicationConstants.FORMAT;
-import static com.javarush.cryptanalyzer.tyapkin.constants.inputOutputConstants.*;
+import static com.javarush.cryptanalyser.tyapkin.coding.Decode.decrypt;
+import static com.javarush.cryptanalyser.tyapkin.constants.applicationConstants.FORMAT;
+import static com.javarush.cryptanalyser.tyapkin.constants.inputOutputConstants.*;
 
 public class DecodeFile {
     public DecodeFile() {
@@ -48,7 +48,7 @@ public class DecodeFile {
                     String line;
 
                     while ((line = file.readLine()) != null) {
-                        line = encrypt(line, key); // кадировка файла
+                        line = decrypt(line, key); // кадировка файла
                         inputBuffer.append(line);
                         inputBuffer.append('\n');
                     }
