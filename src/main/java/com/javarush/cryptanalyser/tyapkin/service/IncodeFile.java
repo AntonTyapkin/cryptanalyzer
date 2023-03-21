@@ -1,5 +1,12 @@
 package com.javarush.cryptanalyser.tyapkin.service;
+
+import com.javarush.cryptanalyser.tyapkin.codingText.EnterText;
+import com.javarush.cryptanalyser.tyapkin.codingText.LoadText;
+import com.javarush.cryptanalyser.tyapkin.codingText.StandardTextEncrypt;
+//import com.javarush.cryptanalyser.tyapkin.codingText.StandartTextEncrypt;
+
 import java.util.Scanner;
+
 import static com.javarush.cryptanalyser.tyapkin.constants.inputOutputConstants.*;
 
 public class IncodeFile {
@@ -18,7 +25,9 @@ public class IncodeFile {
             case "2":
                 LoadText loadText = new LoadText();
                 break;
-            case "3": DefFail defFail = new DefFail();
+            case "3":
+                StandardTextEncrypt defFail = new StandardTextEncrypt();
+                break;
         }
     }
 }

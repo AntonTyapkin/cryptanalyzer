@@ -6,5 +6,5 @@ import javax.xml.transform.Result;
 public interface Function {
 
 
-    Result exsendet();
+    Result execute();
 }

@@ -1,6 +1,6 @@
 package com.javarush.cryptanalyser.tyapkin.applications;
 
-import com.javarush.cryptanalyser.tyapkin.service.BrutForce;
+//import com.javarush.cryptanalyser.tyapkin.service.BrutForce;
 import com.javarush.cryptanalyser.tyapkin.service.DecodeFile;
 import com.javarush.cryptanalyser.tyapkin.service.IncodeFile;
 
@@ -23,10 +23,10 @@ public class Application_Console {
             case "2":
                 DecodeFile decodeFile = new DecodeFile();
                 break;
-            case "3":
-                BrutForce brutForce = new BrutForce();
-                break;
-
+//            case "3":
+//                BrutForce brutForce = new BrutForce();
+//                break;
+//
 
         }
 

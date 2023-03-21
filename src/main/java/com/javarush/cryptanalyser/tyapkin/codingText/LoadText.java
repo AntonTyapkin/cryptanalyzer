@@ -1,4 +1,4 @@
-package com.javarush.cryptanalyser.tyapkin.service;
+package com.javarush.cryptanalyser.tyapkin.codingText;
 
 import com.javarush.cryptanalyser.tyapkin.constants.applicationConstants;
 import com.javarush.cryptanalyser.tyapkin.constants.inputOutputConstants;
@@ -23,10 +23,10 @@ public class LoadText {
         String userWay;
         String fileName;
 
+
                 System.out.println(inputOutputConstants.ENTER_WAY);
                 userWay = userMessage.nextLine();
                 Path directory = Paths.get(userWay);
-
 
                 // имя файла
                 System.out.println(inputOutputConstants.ENTER_NAME);
@@ -35,7 +35,6 @@ public class LoadText {
                 // формат .txt по умолчанию
                 fileName = fileName + applicationConstants.FORMAT;
                 String absolutePath = directory + File.separator + fileName;
-
 
                 //вводим KEY смещения
                 System.out.println(inputOutputConstants.ENTER_KEY);
@@ -50,7 +49,7 @@ public class LoadText {
                     String line;
 
                     while ((line = file.readLine()) != null) {
-                        line = encrypt(line, key); // кадировка файла
+                        line = encrypt(line, key); // кодировка файла
                         inputBuffer.append(line);
                         inputBuffer.append('\n');
                     }

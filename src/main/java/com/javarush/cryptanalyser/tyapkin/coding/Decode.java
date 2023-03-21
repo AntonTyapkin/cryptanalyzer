@@ -2,21 +2,25 @@ package com.javarush.cryptanalyser.tyapkin.coding;
 import com.javarush.cryptanalyser.tyapkin.constants.cryptoAlphabet;
 import com.javarush.cryptanalyser.tyapkin.service.Function;
 
+import static com.javarush.cryptanalyser.tyapkin.constants.cryptoAlphabet.ALPHABET;
+
 
 public abstract class Decode implements Function {
 
     public static String decrypt(String cipherText, int shiftKey) {
 
-        StringBuilder message = new StringBuilder();
+        StringBuilder decryptedText = new StringBuilder();
         for (int i = 0; i < cipherText.length(); i++) {
-            int charPosition = cryptoAlphabet.ALPHABET.indexOf(cipherText.charAt(i));
-            int keyVal = (charPosition - shiftKey) % cryptoAlphabet.ALPHABET.length();
-            if (keyVal < 0) {
-                keyVal = cryptoAlphabet.ALPHABET.length() + keyVal;
+            int index = ALPHABET.indexOf(cipherText.charAt(i));
+            if (index == -1) {
+                decryptedText.append(cipherText.charAt(i));
+            } else if ((index - shiftKey) < 0) {
+                int offsetTemp = shiftKey - (index + 1);
+                decryptedText.append(ALPHABET.charAt(ALPHABET.length() - 1 - offsetTemp));
+            } else {
+                decryptedText.append(ALPHABET.charAt(index - shiftKey));
             }
-            char replaceVal = cryptoAlphabet.ALPHABET.charAt(keyVal);
-            message.append(replaceVal);
         }
-        return message.toString();
+        return decryptedText.toString();
     }
 }

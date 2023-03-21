@@ -1,6 +1,8 @@
 package com.javarush.cryptanalyser.tyapkin;
 import com.javarush.cryptanalyser.tyapkin.applications.Application_Console;
 
+import java.io.File;
+
 
 public class StartPoint {
 
@@ -9,7 +11,6 @@ public class StartPoint {
 
 
         Application_Console application_console = new Application_Console();
-
 
 
     }

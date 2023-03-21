@@ -1,4 +1,4 @@
-package com.javarush.cryptanalyser.tyapkin.service;
+package com.javarush.cryptanalyser.tyapkin.codingText;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -21,7 +21,6 @@ public class EnterText {
         int key;
         String userWay;
         String fileName;
-
 
         System.out.println(ENTER_KEY);
         key = userMessage.nextInt();
