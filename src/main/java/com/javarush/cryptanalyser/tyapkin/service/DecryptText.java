@@ -1,39 +1,28 @@
-package com.javarush.cryptanalyser.tyapkin.codingText;
-import com.javarush.cryptanalyser.tyapkin.constants.inputOutputConstants;
+package com.javarush.cryptanalyser.tyapkin.service;
 
 import java.io.*;
 import java.util.Scanner;
 
-import static com.javarush.cryptanalyser.tyapkin.coding.Decode.decrypt;
-import static com.javarush.cryptanalyser.tyapkin.coding.Encode.encrypt;
-import static com.javarush.cryptanalyser.tyapkin.constants.inputOutputConstants.*;
+import static com.javarush.cryptanalyser.tyapkin.constants.applicationConstants.INPUT_FILE_NAME;
+import static com.javarush.cryptanalyser.tyapkin.constants.applicationConstants.OUTPUT_FILE_NAME;
+import static com.javarush.cryptanalyser.tyapkin.service.coding.Decode.decrypt;
+import static com.javarush.cryptanalyser.tyapkin.constants.inputConstantsConsole.*;
 
 public class DecryptText  {
+
     public DecryptText() {
 
         Scanner userMessage = new Scanner(System.in);
         System.out.println(ENTER_TEXT);
-        String message;
-        message = userMessage.nextLine();
+
         int key;
 
         System.out.println(ENTER_KEY);
         key = userMessage.nextInt();
 
-        String input = "input.txt";
-//        String fileInput = root + File.separator + input;
-
-
-
-        String root = System.getProperty("user.dir");
-        String output = "output.txt";
-        String fileOutput = root + File.separator + output;
-
-
-
         try {
             //
-            BufferedReader file = new BufferedReader(new FileReader(output));
+            BufferedReader file = new BufferedReader(new FileReader(OUTPUT_FILE_NAME));
             StringBuilder inputBuffer = new StringBuilder();
             String line;
 
@@ -45,7 +34,7 @@ public class DecryptText  {
             file.close();
 
             // перезапись  файла
-            FileOutputStream fileOut = new FileOutputStream(fileOutput);
+            FileOutputStream fileOut = new FileOutputStream(INPUT_FILE_NAME);
             fileOut.write(inputBuffer.toString().getBytes());
             fileOut.close();
 
@@ -53,7 +42,5 @@ public class DecryptText  {
             System.out.println("Problem reading file.");
 
         }
-        System.out.println(inputOutputConstants.READY);
-
     }
 }

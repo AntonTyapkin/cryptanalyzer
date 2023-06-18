@@ -1,4 +1,4 @@
 package com.javarush.cryptanalyser.tyapkin.service;
 
-public class ReaderFile {
+public class DecryptBruteForce {
 }
